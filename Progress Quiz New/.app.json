@@ -1,0 +1,15 @@
+{
+  "type": "kendo-ui-mobile",
+  "isNew": true,
+  "dataProviders": [
+    {
+      "type": "dataProvider",
+      "title": "DefaultProvider",
+      "name": "defaultProvider",
+      "source": "everlive",
+      "offlineStorage": true,
+      "everliveKey": "zlkFHD0jz7Rrq3Xe",
+      "everliveUrl": ""
+    }
+  ]
+}
