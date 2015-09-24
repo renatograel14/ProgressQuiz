@@ -11,7 +11,7 @@ app.home = kendo.observable({
     var provider = app.data.defaultProvider,
         mode = 'signin',
         registerRedirect = 'home',
-        signinRedirect = 'home',
+        signinRedirect = 'quizList',
         init = function(error) {
             if (error) {
                 if (error.message) {
