@@ -44,6 +44,29 @@
       "title": "Selecione o Quiz",
       "addToNavigation": true,
       "icon": "organize"
+    },
+    {
+      "type": "view",
+      "components": [
+        {
+          "type": "form",
+          "components": [
+            {
+              "type": "field",
+              "name": "username",
+              "title": "Username",
+              "inputType": "text",
+              "placeholder": "johndoe"
+            }
+          ],
+          "name": "formViewModel",
+          "submitButton": "Confirm",
+          "cancelButton": "Cancel"
+        }
+      ],
+      "name": "formView",
+      "title": "Form",
+      "addToNavigation": false
     }
   ],
   "dataProviders": [

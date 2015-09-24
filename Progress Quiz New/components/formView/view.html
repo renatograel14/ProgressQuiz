@@ -1,0 +1,22 @@
+<div data-role="view" data-title="Form" data-layout="main-nonav" data-model="app.formView" data-show="app.formView.onShow" data-after-show="app.formView.afterShow">
+    <div id="formViewModel" class="form-view">
+        <form>
+            <ul class="form-content" data-role="listview" data-style="inset">
+                <li>
+                    <label>Username
+                        <input data-bind="value: formViewModel.fields.username" placeholder="johndoe" type="text">
+                    </label>
+                </li>
+            </ul>
+
+            <div class="button-group">
+                <a data-role="button" data-bind="events: { click: formViewModel.cancel }">Cancel</a>
+                <a class="primary" data-role="button" data-bind="events: { click: formViewModel.submit }">Confirm</a>
+            </div>
+        </form>
+        <!-- START_CUSTOM_CODE_formViewModel -->
+        <!-- END_CUSTOM_CODE_formViewModel -->
+    </div>
+    <!-- START_CUSTOM_CODE_formView -->
+    <!-- END_CUSTOM_CODE_formView -->
+</div>
