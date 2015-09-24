@@ -56,7 +56,20 @@ app.quizList = kendo.observable({
         },
         dataSource = new kendo.data.DataSource(dataSourceOptions),
         quizListModel = kendo.observable({
-            dataSource: dataSource
+            dataSource: dataSource,
+            itemClick: function(e) {
+                app.mobileApp.navigate('#components/quizList/details.html?uid=' + e.dataItem.uid);
+            },
+            detailsShow: function(e) {
+                var item = e.view.params.uid,
+                    dataSource = quizListModel.get('dataSource'),
+                    itemModel = dataSource.getByUid(item);
+                if (!itemModel.Text) {
+                    itemModel.Text = String.fromCharCode(160);
+                }
+                quizListModel.set('currentItem', itemModel);
+            },
+            currentItem: null
         });
 
     parent.set('quizListModel', quizListModel);

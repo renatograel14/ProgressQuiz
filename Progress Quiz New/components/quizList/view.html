@@ -1,7 +1,7 @@
 <div data-role="view" data-title="Selecione o Quiz" data-layout="main" data-model="app.quizList" data-show="app.quizList.onShow" data-after-show="app.quizList.afterShow">
     <!-- START_CUSTOM_CODE_quizList -->
     <!-- END_CUSTOM_CODE_quizList -->
-    <ul data-role="listview" data-style="inset" data-template="quizListModelTemplate" data-bind="{ source: quizListModel.dataSource}" data-pull-to-refresh="false" data-endless-scroll="false">
+    <ul data-role="listview" data-style="inset" data-template="quizListModelTemplate" data-bind="{ source: quizListModel.dataSource, events: {click: quizListModel.itemClick}}" data-pull-to-refresh="false" data-endless-scroll="false">
     </ul>
     <!-- START_CUSTOM_CODE_quizListModel -->
     <!-- END_CUSTOM_CODE_quizListModel -->

@@ -35,7 +35,7 @@
           "dataProvider": "defaultProvider",
           "collection": "Activities",
           "headerField": "Text",
-          "masterDetails": false,
+          "masterDetails": true,
           "pullToRefresh": false,
           "endlessScroll": false
         }
