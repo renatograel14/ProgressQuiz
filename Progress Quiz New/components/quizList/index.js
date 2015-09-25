@@ -31,7 +31,7 @@ app.quizList = kendo.observable({
         dataSourceOptions = {
             type: 'everlive',
             transport: {
-                typeName: 'Activities',
+                typeName: 'Quiz',
                 dataProvider: dataProvider
             },
 
@@ -46,8 +46,8 @@ app.quizList = kendo.observable({
             schema: {
                 model: {
                     fields: {
-                        'Text': {
-                            field: 'Text',
+                        'Name': {
+                            field: 'Name',
                             defaultValue: ''
                         },
                     }
@@ -64,9 +64,6 @@ app.quizList = kendo.observable({
                 var item = e.view.params.uid,
                     dataSource = quizListModel.get('dataSource'),
                     itemModel = dataSource.getByUid(item);
-                if (!itemModel.Text) {
-                    itemModel.Text = String.fromCharCode(160);
-                }
                 quizListModel.set('currentItem', itemModel);
             },
             currentItem: null

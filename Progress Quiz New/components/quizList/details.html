@@ -2,11 +2,26 @@
     <header data-role="header">
         <div data-role="navbar" class="header-text">
             <a data-role="backbutton" data-align="left">Back</a>
-            <span data-bind="text: currentItem.Text" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis; text-align: center; display: block; margin-left: 70px; margin-right: 70px;"></span>
         </div>
     </header>
-
-
+    <ul data-role="listview" data-style="inset" data-template="questionsTemplate" data-bind="{ source: currentItem.questions }" data-pull-to-refresh="false" data-endless-scroll="false">
+    </ul>
+    <script type="text/x-kendo-template" id="questionsTemplate">
+        <div class="image-with-text" >
+            <h3>#: data.questionText #</h3>
+            <ul data-role="buttongroup" class="btn-group-vertical">
+                <li>
+                	#: data.options.A.optionText #
+                </li>
+                <li>
+                	#: data.options.B.optionText #
+                </li>
+                <li>
+                	#: data.options.C.optionText #
+                </li>
+            </ul>
+        </div>
+    </script>
     <!-- START_CUSTOM_CODE_quizListModel -->
     <!-- END_CUSTOM_CODE_quizListModel -->
 </div>
